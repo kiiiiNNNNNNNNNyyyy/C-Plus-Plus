@@ -6,5 +6,6 @@
     "isShellCommand": true,
     "args": ["Hello World"],
     "showOutput": "always",
-    "terminal": "integrated"
+    "terminal": "integrated",
+    "echoCommand": true
 }
