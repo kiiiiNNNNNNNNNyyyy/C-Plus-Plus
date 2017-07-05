@@ -1,3 +1,4 @@
+//for myself - T run the program in vscode - typw g++ -- ProgramName.cpp to create a exe file.
 #include <iostream>
 
 main(){
