@@ -43,4 +43,4 @@ int main(){
     std::cout << "&ordinary pointer : " << &oridinary << std::endl;    //address of the pointer
 
     return 0;
-}
+}       
