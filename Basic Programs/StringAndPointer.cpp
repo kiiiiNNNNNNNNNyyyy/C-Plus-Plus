@@ -32,6 +32,27 @@ int main(){
     std::string test = array;
     std::cout << test << std::endl;
 
+    const char *a2 = "this is a test 12344";
+    a[2] = 'a';   //We cannot do this without const, because it is a constant and it is deprecated
+    std::cout << a2 << std::endl;
+
+    char b[] =  "This is also a test message";  
+    b[0] = 'g'; //this is possible, this only in case of pointers we cannot assign
+    std::cout << b << std::endl;
+
+    //this is because in when we initialize a pointer, we are creating space in memory for that pointer and it cannot be changed 
+    //for a particular character in a string, because that pointer is just pointing to that string
+    //whereas in the second case we are initializing space for every character in that string, therefore, data at the space can
+    //be changed    
+
+    char * const dynamicArray = new char[50];
+    std::cout << dynamicArray << std::endl; //random characters because not initialized
+    //dynamicArray = "lalala";    //we cannot change this value because its a pointer if char is not a const
+    dynamicArray[0] = 'g';      //will not work
+    std::cout << dynamicArray << std::endl; //random characters because not initialized
+
+    delete [] dynamicArray; 
+
     std::cout << "For integer array  : " << std::endl;  
     std::cout << a << std::endl;    //this returns the address 
     std::cout << a[0] << std::endl;
