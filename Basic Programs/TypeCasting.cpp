@@ -11,7 +11,7 @@ int main(){
 
     std::cout <<static_cast<int>(var) << std::endl; //c++ version explicit way, rest are c versions
 
-    char c = 'g';   //don't use double quotes, it wont work
+    char c = 'g';   //don't use double quotes, it wont work 
     int x = static_cast<int>(c);
     std::cout << x << std::endl;
 
