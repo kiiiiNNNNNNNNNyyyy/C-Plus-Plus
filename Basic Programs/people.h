@@ -4,8 +4,16 @@
 class PersonalClassData{
     //by default class members are private
     public: 
-        short age;
 
+        PersonalClassData(){
+            std::cout << "This constructor has been just invoked" << std::endl;
+            age = 10;
+        };
+
+        ~PersonalClassData(){
+            std::cout << "This Destructor has been just invoked" << std::endl;
+        };
+        short age;
         void setAge(int value){
             age = value;
         }

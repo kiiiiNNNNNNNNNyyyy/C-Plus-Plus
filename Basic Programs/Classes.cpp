@@ -12,6 +12,7 @@ int main(){
     std::cout << person.age << std::endl;
 
     PersonalClassData person2;
+    std::cout << person2.age << std::endl;
     person2.age = 55;
     std::cout << person2.age << std::endl;
 
