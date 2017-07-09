@@ -5,6 +5,8 @@ struct personalData{
     short age;
 };
 
+//classes defined as separate files named "people.h" included
+
 int main(){
     
     personalData person;
@@ -27,3 +29,5 @@ int main(){
     return 0;
 
 }
+
+
