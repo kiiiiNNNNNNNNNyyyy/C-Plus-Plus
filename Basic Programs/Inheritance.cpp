@@ -20,10 +20,21 @@ class Point{    //base class, or parent class or  super class
         };
 };
 
-class Point2D : public Point{   // this means inheriting public stuff from Point class
+class Point2D : public Point{   // this means inheriting public stuff from Point class //derived class or child class
+    protected:
+        int y;
+    public:
+         Point2D(int x, int y) : Point(x){
+            this->y = y;
+         };
+         ~Point2D(){
 
+         };
 };
 
+class Point3D : public Point2D{
+
+};
 void operationOnPoints();
 
 int main(){
@@ -32,6 +43,6 @@ int main(){
 }
 
 void operationOnPoints(){   
-    Point p1(5);
-    std::cout << p1.getX() << std::endl; 
+    Point2D p2(5, 6);
+    std::cout << p2.getX() << std::endl; 
 };
