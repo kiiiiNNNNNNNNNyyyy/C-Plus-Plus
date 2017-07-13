@@ -75,6 +75,9 @@ int main(){
     std::cout << cow.getVoice() << std::endl;
 
     voiceOfAnimal(&animal);
+    Animal *p = &dog; //we can do this, dog class is inherited from the animal class 
+    //Dog *p2 = &cat; //we cannot do this, because its not inherited
+    std::cout << p->getVoice() <<  std::endl;
     return 0;
 }
 
