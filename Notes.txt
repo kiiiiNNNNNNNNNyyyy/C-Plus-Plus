@@ -1,4 +1,17 @@
+*********************** C vs C++ ***************************
 C was developed by Denis Ritchie, inventor of unix os.
 C supports imperative programming and c++ supports OO and generic programming.
 c++ has more features than C and its more simpler than C. Supports more keyword than C.
-C is a subset of C++.
+C is a subset of C++ and has more libraries.
+
+*********************** Java vs C++ - ***********************
+Java is platform independent.
+Java was developed with Smalltalk with C Syntax
+In java you dont have to worry about memory management.
+
+************************** C++ advantages *******************
+Iostream cin >> type safe
+Declaration can be intermixed after executable
+use of "new"
+C - malloc is replaced by "new" and free is replaced by "delete"
+Type casting in C = (double)expression; in C++, static_cast<double>()  - //only convert if its safe to convert
