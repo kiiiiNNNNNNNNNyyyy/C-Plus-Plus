@@ -1,0 +1,4 @@
+C was developed by Denis Ritchie, inventor of unix os.
+C supports imperative programming and c++ supports OO and generic programming.
+c++ has more features than C and its more simpler than C. Supports more keyword than C.
+C is a subset of C++.
