@@ -36,7 +36,7 @@ class Employee{
         }
 
         std::string toString(){
-            std::stringstream stm;
+                 stm;
             stm << name << " : " << pay;    //concatenating string with a double using sstream lib
             return stm.str();
         }
