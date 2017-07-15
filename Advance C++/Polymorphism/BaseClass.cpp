@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>  //to concatenate string with double
+#include <vector>
 
 class Employee{
     private: 
@@ -41,7 +42,9 @@ class Employee{
             return stm.str();
         }
 
-        double grossPay(int hours){
+        // Now the  compiler will look at that function and will know that its virtual and will know which code to run base on 
+        // the datatype of the object that is stored in the  object rather than just looking at the datatype.
+        virtual double grossPay(int hours){
             return pay * hours; 
         }
 
@@ -69,7 +72,8 @@ class Manager : public Employee{    //derived class inherited from Employee clas
             return salaried;
         }
         
-        double grossPay(int hours){
+        //its is recommended to make the derived class vitual as well
+        virtual double grossPay(int hours){
             if(salaried){
                 return pay; //this wont work coz pay is private, need to change the access level
             }else{
@@ -107,5 +111,15 @@ int main(){
     //the above code returns wrong input because the compiler here is looking at the object that is stored
     //in our variable, but instead its looking at the datatype  of the variable itself So the pointer to employee is still gonna call
     // the employee grossspay function even if its a manager object.
+
+    //after adding the virtual function our program will work properly
+
+    std::vector<Employee*> employees;
+    employees.push_back(&emp1);
+    employees.push_back(&mgr1);
+    for(int i=0; i<employees.size(); ++i){
+        std::cout << "Name: " << employees[i]->getName() << std::endl;
+        std::cout << "Pay: " << employees[i]->grossPay(40) << std::endl;
+    }
     return 0;
 }
