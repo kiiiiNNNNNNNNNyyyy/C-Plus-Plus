@@ -15,3 +15,4 @@ Declaration can be intermixed after executable
 use of "new"
 C - malloc is replaced by "new" and free is replaced by "delete"
 Type casting in C = (double)expression; in C++, static_cast<double>()  - //only convert if its safe to convert
+for loops includes inializations
