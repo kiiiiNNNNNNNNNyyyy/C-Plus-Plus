@@ -17,6 +17,8 @@ class Employee{
             pay = payRate;
         }
 
+        ~Employee(){}
+         
         std::string getName(){
             return name;
         }
@@ -51,9 +53,17 @@ class Manager : public Employee{    //derived class inherited from Employee clas
 
     public:
         ////becoz we wanna use the constructor from employee class, that why declaring like this
+        // Manager(std::string name, double payRate, bool isSalaried) : Employee(name, payRate){     
+        //     salaried = isSalaried;
+        //default constructor
+        Manager() : salaried(true){}
+
         Manager(std::string name, double payRate, bool isSalaried) : Employee(name, payRate){     
             salaried = isSalaried;
         }
+
+        //free allocated memory - called automatically
+        ~Manager(){}
 
         bool getSalaried(){
             return salaried;
