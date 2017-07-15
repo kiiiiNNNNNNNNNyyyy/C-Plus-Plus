@@ -4,6 +4,7 @@
 class Employee{
     private: 
         std::string name;
+    protected:
         double pay;
     public:
         Employee(){
@@ -38,6 +39,10 @@ class Employee{
             return stm.str();
         }
 
+        double grossPay(int hours){
+            return pay * hours; 
+        }
+
 };
 
 class Manager : public Employee{    //derived class inherited from Employee class
@@ -53,6 +58,10 @@ class Manager : public Employee{    //derived class inherited from Employee clas
         bool getSalaried(){
             return salaried;
         }
+        
+        double grossPay(){
+            return pay; //this wont work coz pay is private, need to change the access level
+        }
 };
 
 int main(){
@@ -65,10 +74,14 @@ int main(){
     Employee empl3("Mary Smith", 15.00);
     std::cout << "Employee name: " << empl3.getName() << std::endl;
     std::cout << "Employee payrate: " << empl3.getPay() << std::endl;
+    std::cout << "Employee gross rate: " << empl3.grossPay(40) << std::endl;
 
     Manager man1("Bob Brown", 1500, true);
     std::cout << "Employee name: " << man1.getName() << std::endl;
     std::cout << "Employee payrate: " << man1.getPay() << std::endl;
     std::cout << "isSalaried ?: " << man1.getSalaried() << std::endl; 
+    std::cout << "Employee gross pay: " << man1.grossPay() << std::endl; 
+
+
     return 0;
 }
