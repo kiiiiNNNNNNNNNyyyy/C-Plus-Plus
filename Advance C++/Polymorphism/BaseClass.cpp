@@ -95,5 +95,17 @@ int main(){
 
     Employee emp1("Jones", 25.00);
     Manager mgr1("Smith", 1200, true);
+    Employee *emptr;
+    emptr = &emp1;
+    std::cout << "Name: " << emptr->getName() << std::endl;
+    std::cout << "Pay: " << emptr->grossPay(40) << std::endl;
+
+    emptr = &mgr1;
+    std::cout << "Name: " << emptr->getName() << std::endl;
+    std::cout << "Pay: " << emptr->grossPay(40) << std::endl;
+
+    //the above code returns wrong input because the compiler here is looking at the object that is stored
+    //in our variable, but instead its looking at the datatype  of the variable itself So the pointer to employee is still gonna call
+    // the employee grossspay function even if its a manager object.
     return 0;
 }
