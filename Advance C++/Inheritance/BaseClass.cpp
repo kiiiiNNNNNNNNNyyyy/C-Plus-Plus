@@ -3,9 +3,9 @@
 
 class Employee{
     private: 
-        std::string name;
     protected:
         double pay;
+        std::string name;
     public:
         Employee(){
             name = "";
@@ -59,8 +59,25 @@ class Manager : public Employee{    //derived class inherited from Employee clas
             return salaried;
         }
         
-        double grossPay(){
-            return pay; //this wont work coz pay is private, need to change the access level
+        double grossPay(int hours){
+            if(salaried){
+                return pay; //this wont work coz pay is private, need to change the access level
+            }else{
+                return pay * hours; 
+            }
+            
+        }
+
+        std::string toString(){
+            std::stringstream stm;
+            std::string salary;
+            if(salaried){
+                salary = "Salaried";
+            }else{
+                salary = "Hourly";
+            }
+            stm << name << " : " << pay << " : " << salary << std::endl;
+            return stm.str();
         }
 };
 
@@ -80,7 +97,8 @@ int main(){
     std::cout << "Employee name: " << man1.getName() << std::endl;
     std::cout << "Employee payrate: " << man1.getPay() << std::endl;
     std::cout << "isSalaried ?: " << man1.getSalaried() << std::endl; 
-    std::cout << "Employee gross pay: " << man1.grossPay() << std::endl; 
+    std::cout << "Employee gross pay: " << man1.grossPay(10) << std::endl; 
+    std::cout << "Testing manager toString: " << man1.toString() << std::endl;
 
 
     return 0;
