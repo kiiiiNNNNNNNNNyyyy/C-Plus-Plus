@@ -4,6 +4,7 @@
 //Abstract class - A class that cannot be instantiated and will not be instantiated 
 // is called an abstract class
 //we create a complete abstract class by assigning a virtial function to 0;
+//virtual function allows functions to be used by its own class
 
 class Shape{
     virtual void setX(int x) = 0;
