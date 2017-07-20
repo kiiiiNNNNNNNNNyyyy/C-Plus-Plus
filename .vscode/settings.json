@@ -35,6 +35,7 @@
         "ctime": "cpp",
         "sstream": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "xmemory": "cpp"
     }
 }
