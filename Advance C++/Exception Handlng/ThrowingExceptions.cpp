@@ -25,8 +25,12 @@ int main(){
     try{
         ratio = quotient(number1, number2);
         std::cout << "Result is: " << ratio;
-    }catch(DividedByZero &except){
-        std::cout << except.what() <<std::endl; // this returns the arguement that we mentioned in runtime_error.
+    
+    }//catch(DividedByZero &except){
+    //     std::cout << except.what() <<std::endl; // this returns the arguement that we mentioned in runtime_error.
+    // }
+    catch(...){
+        std::cout << "Exception thrown and caught " << std::endl;   //use this catch All only if you dont know which exceptions are gonna occur
     }
 
     return 0;
