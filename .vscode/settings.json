@@ -38,6 +38,7 @@
         "vector": "cpp",
         "xmemory": "cpp",
         "fstream": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "deque": "cpp"
     }
 }
