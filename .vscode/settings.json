@@ -37,6 +37,7 @@
         "string": "cpp",
         "vector": "cpp",
         "xmemory": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "list": "cpp"
     }
 }
