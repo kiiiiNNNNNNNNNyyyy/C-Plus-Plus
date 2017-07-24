@@ -20,7 +20,7 @@ int main(){
     names.push_back("Jim");
     names.push_back("David");
 
-    std::list<std::string>::iterator iter = names.begin();
+    std::list<std::string>::iterator iter = names.begin();  //iterate from the begining
 
     while(iter != names.end()){
         std::cout << *iter << std::endl;
