@@ -39,6 +39,7 @@
         "xmemory": "cpp",
         "fstream": "cpp",
         "list": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "xtree": "cpp"
     }
 }
