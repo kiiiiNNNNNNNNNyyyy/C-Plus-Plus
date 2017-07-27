@@ -24,7 +24,6 @@ int main(){
     std::vector<std::string> namesVector(names, names+size2);
     display(namesVector);
     sort(namesVector.begin(), namesVector.end());
-    display(namesVector
-    );
+    display(namesVector);
     return 0;
 }
