@@ -37,6 +37,36 @@ class Queue{
             std::cout << std::endl;
         }
 
+        int count(){
+            int cnt = 0;
+            for(int i=0; i<=back; ++i){
+                ++cnt;
+            }
+            return cnt;
+        }
+
+        std::string qFront(){
+            return dataStore[front];
+        }
+
+        std::string qBack(){
+            return dataStore[back];
+        }
+
+        bool isEmpty(){
+            if(back == -1){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        void clear(){
+            for(int i=front; i<=back; ++i){
+                dataStore[i] = "";
+            }
+        }
+
 };
 
 int main(){
@@ -47,12 +77,26 @@ int main(){
     names.enqueue("Jim");
     names.enqueue("Tom");
 
+    std::cout << "Front: " <<names.qFront() << std::endl;
+    std::cout << "Back: " <<names.qBack() << std::endl;
+
     names.show();
     names.dequeue();
+
+    std::cout << "Front: " <<names.qFront() << std::endl;
+    std::cout << "Back: " <<names.qBack() << std::endl;
     names.show();
     names.enqueue("Arjun");
     names.show();
     names.dequeue();
+
+    std::cout << "Front: " <<names.qFront() << std::endl;
+    std::cout << "Back: " <<names.qBack() << std::endl;
+    names.show();
+
+    names.clear();
+    std::cout << "Front: " <<names.qFront() << std::endl;
+    std::cout << "Back: " <<names.qBack() << std::endl;
     names.show();
     return 0;
 }
