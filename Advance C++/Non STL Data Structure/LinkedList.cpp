@@ -62,8 +62,41 @@ class LList{
                 delete tmp;
             }
         }
+
+        void Print(){
+            Node *tmp = head;
+            if(tmp == NULL){
+                std::cout << "Empty List" << std::endl;
+                return;
+            }
+
+            if(tmp->Next() == NULL){
+                std::cout << tmp->getData();
+                std::cout << " --> ";
+                std::cout << "NULL" << std::endl;
+            }else{
+                do{
+                    std::cout << tmp->getData();
+                    std::cout << " --> ";
+                    tmp = tmp->Next();
+                }while(tmp != NULL);
+                std::cout << "NULL" << std::endl;
+            }
+        }
 };
 
 int main(){
+
+    LList names;
+    names.Append("Raymond");
+    names.Print();  
+    names.Append("David");
+    names.Print();
+    names.Append("Jim");
+    names.Print();
+    names.Append("Tom");
+    names.Print();
+    names.Delete("David");
+    names.Print();
     return 0;
 }
