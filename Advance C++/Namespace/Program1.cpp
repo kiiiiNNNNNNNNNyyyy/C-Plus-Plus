@@ -1,6 +1,13 @@
 #include <iostream>
 
 //namespace goes into the global areas
+//necessary function 
+/*
+    string.find("hello") =  always return the position of the first occurance, no matter how many hello are there
+    string.find("Hello") = always returns the last occurance of the string
+    string.find_first_of("")  = returns any occurance of the string
+
+*/
 
 namespace firstNums {
     int num1 = 10;
