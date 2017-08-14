@@ -16,3 +16,7 @@ use of "new"
 C - malloc is replaced by "new" and free is replaced by "delete"
 Type casting in C = (double)expression; in C++, static_cast<double>()  - //only convert if its safe to convert
 for loops includes inializations
+
+************************** C++ At a Glance ********************
+C++ is a strongly typed language.
+Classes are also a structure, but by default all the members of a class are private.
