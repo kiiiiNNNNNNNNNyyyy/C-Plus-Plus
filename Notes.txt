@@ -20,3 +20,19 @@ for loops includes inializations
 ************************** C++ At a Glance ********************
 C++ is a strongly typed language.
 Classes are also a structure, but by default all the members of a class are private.
+
+Templates : - Templates are relatively a new feature of C++ which allows us to write a class of an
+arbitrary type and specify a type when each object is created.
+
+Two Major problems with Templates:-
+-> The syntax can be a little overwhelming.
+-> They are so new that most compilters do not support them.
+
+Algorithmic Complexties based on numbers of values provided to them
+
+                O(n3)       O(n2)       O(nlogn)        O(n)
+n = 10          0.00103     0.00045     0.00066         0.00034
+n = 100         0.47015     0.01112     0.00486         0.00063
+n = 1000        448.77      1.1233      0.05843         0.00333
+n = 10000       NA          111.13      0.68631         0.03042
+n = 100000      NA          NA          8.0113          0.29832                
