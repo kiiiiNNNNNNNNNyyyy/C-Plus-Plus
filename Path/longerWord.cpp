@@ -6,11 +6,12 @@ int main(){
     std::string word2;
 
     std::cout << "Enter word 1 : ";
-    std::cin >> word1;
+    //std::cin >> word1;
+    getline(std::cin, word1);
     std::cout << std::endl;
 
     std::cout << "Enter word 2 : ";
-    std::cin >> word2;
+    getline(std::cin, word1);
     std::cout << std::endl;
 
     if(word1.length() > word2.length()){
