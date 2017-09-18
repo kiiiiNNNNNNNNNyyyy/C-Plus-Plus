@@ -20,6 +20,5 @@ int main(){
     // }
 
     //int& badReference; // you can do this, reference need to be assigned to something unlike pointer
-        
     return 0;
 }
